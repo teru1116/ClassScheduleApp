@@ -1,0 +1,21 @@
+//
+//  ClassScheduleApp-Prefix.pch
+//  ClassScheduleApp
+//
+//  Created by teruyakusumoto on 2016/04/09.
+//  Copyright © 2016年 teruyakusumoto. All rights reserved.
+//
+
+#ifndef ClassScheduleApp_Prefix_pch
+#define ClassScheduleApp_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "CommonDefine.h"
+#import "CommonUtil.h"
+#import "CoreDataManager.h"
+#import "ClassData.h"
+#import "HistoryData.h"
+
+#endif /* ClassScheduleApp_Prefix_pch */

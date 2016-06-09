@@ -1,0 +1,881 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		65B17EB54281A46AF93C12FA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A366A2CE0331CA671284063C /* libPods.a */; };
+		F401223D1CB8801700D9228A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F401223C1CB8801700D9228A /* main.m */; };
+		F40122401CB8801700D9228A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F401223F1CB8801700D9228A /* AppDelegate.m */; };
+		F40122481CB8801700D9228A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F40122471CB8801700D9228A /* Assets.xcassets */; };
+		F401224B1CB8801700D9228A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F40122491CB8801700D9228A /* LaunchScreen.storyboard */; };
+		F40122561CB8801800D9228A /* ClassScheduleAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F40122551CB8801800D9228A /* ClassScheduleAppTests.m */; };
+		F40122611CB8801800D9228A /* ClassScheduleAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F40122601CB8801800D9228A /* ClassScheduleAppUITests.m */; };
+		F40122701CB8804A00D9228A /* ContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F401226F1CB8804A00D9228A /* ContainerViewController.m */; };
+		F40122731CB8809400D9228A /* DailyContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F40122721CB8809400D9228A /* DailyContainerViewController.m */; };
+		F40122761CB880A000D9228A /* DailyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F40122751CB880A000D9228A /* DailyTableViewController.m */; };
+		F40122791CB880AE00D9228A /* WeeklyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F40122781CB880AE00D9228A /* WeeklyViewController.m */; };
+		F401227C1CB8814400D9228A /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F401227B1CB8814400D9228A /* CoreDataManager.m */; };
+		F401227F1CB8815400D9228A /* ConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F401227E1CB8815400D9228A /* ConfigViewController.m */; };
+		F40122851CB8829B00D9228A /* CommonUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F40122841CB8829B00D9228A /* CommonUtil.m */; };
+		F401228A1CB891E400D9228A /* GridView.m in Sources */ = {isa = PBXBuildFile; fileRef = F40122891CB891E400D9228A /* GridView.m */; };
+		F401228D1CB8984800D9228A /* GridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F401228C1CB8984800D9228A /* GridViewCell.m */; };
+		F40122901CB8993700D9228A /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F401228E1CB8993700D9228A /* Model.xcdatamodeld */; };
+		F401229C1CB89C5A00D9228A /* ClassData+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = F40122991CB89C5A00D9228A /* ClassData+CoreDataProperties.m */; };
+		F401229D1CB89C5A00D9228A /* ClassData.m in Sources */ = {isa = PBXBuildFile; fileRef = F401229B1CB89C5A00D9228A /* ClassData.m */; };
+		F40122A01CB8A19800D9228A /* InputPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = F401229F1CB8A19800D9228A /* InputPopupView.m */; };
+		F449040B1CF677BC0013E454 /* TriangleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F449040A1CF677BC0013E454 /* TriangleButton.m */; };
+		F44904101CF751FE0013E454 /* icon_class@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F449040D1CF751FE0013E454 /* icon_class@2x.png */; };
+		F44904111CF751FE0013E454 /* icon_pencil@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F449040E1CF751FE0013E454 /* icon_pencil@2x.png */; };
+		F44904121CF751FE0013E454 /* icon_teacher@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F449040F1CF751FE0013E454 /* icon_teacher@2x.png */; };
+		F44904151CF8FBEA0013E454 /* InputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F44904141CF8FBEA0013E454 /* InputViewController.m */; };
+		F449041A1CF99D680013E454 /* HistoryData+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = F44904171CF99D680013E454 /* HistoryData+CoreDataProperties.m */; };
+		F449041B1CF99D680013E454 /* HistoryData.m in Sources */ = {isa = PBXBuildFile; fileRef = F44904191CF99D680013E454 /* HistoryData.m */; };
+		F449041E1CF9AA4B0013E454 /* HistoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F449041D1CF9AA4B0013E454 /* HistoryTableViewCell.m */; };
+		F44904201CFB4D520013E454 /* icon_down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F449041F1CFB4D520013E454 /* icon_down@2x.png */; };
+		F455D3B21D00756A00872943 /* DaoEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = F455D3B11D00756A00872943 /* DaoEvents.m */; };
+		F455D3B51D00757900872943 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = F455D3B41D00757900872943 /* Event.m */; };
+		F47ADE901CF1C13F004DA696 /* DailyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F47ADE8F1CF1C13F004DA696 /* DailyTableViewCell.m */; };
+		F47ADE921CF1C44D004DA696 /* DailyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F47ADE911CF1C44D004DA696 /* DailyTableViewCell.xib */; };
+		F47ADE941CF2E82A004DA696 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F47ADE931CF2E82A004DA696 /* MessageUI.framework */; };
+		F47ADE961CF2EB2A004DA696 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F47ADE951CF2EB2A004DA696 /* Images.xcassets */; };
+		F47EC8EC1D046AD2006B05D7 /* ConfigTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F47EC8EB1D046AD2006B05D7 /* ConfigTableViewCell.m */; };
+		F47EC8F61D064EBA006B05D7 /* checkmark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F47EC8F51D064EBA006B05D7 /* checkmark@2x.png */; };
+		F483841A1CFC6BA1006EC029 /* Default-568h@2x 21.21.19.png in Resources */ = {isa = PBXBuildFile; fileRef = F48384191CFC6BA1006EC029 /* Default-568h@2x 21.21.19.png */; };
+		F4E4D8DD1D09BC2100708016 /* InputViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4E4D8DC1D09BC2100708016 /* InputViewController.xib */; };
+		F4F146D31CBA928E00D32410 /* btn_config@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4F146D21CBA928D00D32410 /* btn_config@2x.png */; };
+		F4F146D81CBBF84A00D32410 /* lightblue.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F4F146D61CBBF84A00D32410 /* lightblue.jpg */; };
+		F4F146D91CBBF84A00D32410 /* brown.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F4F146D71CBBF84A00D32410 /* brown.jpg */; };
+		F4F146E21CBBFDF400D32410 /* purple.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F4F146DA1CBBFDF400D32410 /* purple.jpg */; };
+		F4F146E31CBBFDF400D32410 /* yellow.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F4F146DB1CBBFDF400D32410 /* yellow.jpg */; };
+		F4F146E41CBBFDF400D32410 /* blue.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F4F146DC1CBBFDF400D32410 /* blue.jpg */; };
+		F4F146E51CBBFDF400D32410 /* green.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F4F146DD1CBBFDF400D32410 /* green.jpg */; };
+		F4F146E61CBBFDF400D32410 /* orange.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F4F146DE1CBBFDF400D32410 /* orange.jpg */; };
+		F4F146E71CBBFDF400D32410 /* lightgreen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F4F146DF1CBBFDF400D32410 /* lightgreen.jpg */; };
+		F4F146E81CBBFDF400D32410 /* red.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F4F146E01CBBFDF400D32410 /* red.jpg */; };
+		F4F146E91CBBFDF400D32410 /* pink.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F4F146E11CBBFDF400D32410 /* pink.jpg */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F40122521CB8801800D9228A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F40122301CB8801700D9228A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F40122371CB8801700D9228A;
+			remoteInfo = ClassScheduleApp;
+		};
+		F401225D1CB8801800D9228A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F40122301CB8801700D9228A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F40122371CB8801700D9228A;
+			remoteInfo = ClassScheduleApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		09D75EA15D0BC541BF23333D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		A366A2CE0331CA671284063C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A62073D9CFAC4AF19E087393 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		F40122381CB8801700D9228A /* ClassScheduleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClassScheduleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F401223C1CB8801700D9228A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F401223E1CB8801700D9228A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F401223F1CB8801700D9228A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F40122471CB8801700D9228A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F401224A1CB8801700D9228A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F401224C1CB8801700D9228A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F40122511CB8801800D9228A /* ClassScheduleAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClassScheduleAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F40122551CB8801800D9228A /* ClassScheduleAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClassScheduleAppTests.m; sourceTree = "<group>"; };
+		F40122571CB8801800D9228A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F401225C1CB8801800D9228A /* ClassScheduleAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClassScheduleAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F40122601CB8801800D9228A /* ClassScheduleAppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClassScheduleAppUITests.m; sourceTree = "<group>"; };
+		F40122621CB8801800D9228A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F401226E1CB8804A00D9228A /* ContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContainerViewController.h; sourceTree = "<group>"; };
+		F401226F1CB8804A00D9228A /* ContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContainerViewController.m; sourceTree = "<group>"; };
+		F40122711CB8809400D9228A /* DailyContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DailyContainerViewController.h; sourceTree = "<group>"; };
+		F40122721CB8809400D9228A /* DailyContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DailyContainerViewController.m; sourceTree = "<group>"; };
+		F40122741CB880A000D9228A /* DailyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DailyTableViewController.h; sourceTree = "<group>"; };
+		F40122751CB880A000D9228A /* DailyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DailyTableViewController.m; sourceTree = "<group>"; };
+		F40122771CB880AE00D9228A /* WeeklyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeeklyViewController.h; sourceTree = "<group>"; };
+		F40122781CB880AE00D9228A /* WeeklyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeeklyViewController.m; sourceTree = "<group>"; };
+		F401227A1CB8814400D9228A /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
+		F401227B1CB8814400D9228A /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
+		F401227D1CB8815400D9228A /* ConfigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigViewController.h; sourceTree = "<group>"; };
+		F401227E1CB8815400D9228A /* ConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigViewController.m; sourceTree = "<group>"; };
+		F40122821CB8823C00D9228A /* CommonDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonDefine.h; sourceTree = "<group>"; };
+		F40122831CB8829B00D9228A /* CommonUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonUtil.h; sourceTree = "<group>"; };
+		F40122841CB8829B00D9228A /* CommonUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonUtil.m; sourceTree = "<group>"; };
+		F40122871CB8830700D9228A /* ClassScheduleApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ClassScheduleApp-Prefix.pch"; sourceTree = "<group>"; };
+		F40122881CB891E400D9228A /* GridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridView.h; sourceTree = "<group>"; };
+		F40122891CB891E400D9228A /* GridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridView.m; sourceTree = "<group>"; };
+		F401228B1CB8984800D9228A /* GridViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridViewCell.h; sourceTree = "<group>"; };
+		F401228C1CB8984800D9228A /* GridViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridViewCell.m; sourceTree = "<group>"; };
+		F401228F1CB8993700D9228A /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		F40122981CB89C5A00D9228A /* ClassData+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ClassData+CoreDataProperties.h"; path = "../ClassData+CoreDataProperties.h"; sourceTree = "<group>"; };
+		F40122991CB89C5A00D9228A /* ClassData+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ClassData+CoreDataProperties.m"; path = "../ClassData+CoreDataProperties.m"; sourceTree = "<group>"; };
+		F401229A1CB89C5A00D9228A /* ClassData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ClassData.h; path = ../ClassData.h; sourceTree = "<group>"; };
+		F401229B1CB89C5A00D9228A /* ClassData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ClassData.m; path = ../ClassData.m; sourceTree = "<group>"; };
+		F401229E1CB8A19800D9228A /* InputPopupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputPopupView.h; sourceTree = "<group>"; };
+		F401229F1CB8A19800D9228A /* InputPopupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputPopupView.m; sourceTree = "<group>"; };
+		F44904091CF677BC0013E454 /* TriangleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TriangleButton.h; sourceTree = "<group>"; };
+		F449040A1CF677BC0013E454 /* TriangleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TriangleButton.m; sourceTree = "<group>"; };
+		F449040D1CF751FE0013E454 /* icon_class@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_class@2x.png"; path = "../../icon_class@2x.png"; sourceTree = "<group>"; };
+		F449040E1CF751FE0013E454 /* icon_pencil@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_pencil@2x.png"; path = "../../icon_pencil@2x.png"; sourceTree = "<group>"; };
+		F449040F1CF751FE0013E454 /* icon_teacher@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_teacher@2x.png"; path = "../../icon_teacher@2x.png"; sourceTree = "<group>"; };
+		F44904131CF8FBEA0013E454 /* InputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputViewController.h; sourceTree = "<group>"; };
+		F44904141CF8FBEA0013E454 /* InputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputViewController.m; sourceTree = "<group>"; };
+		F44904161CF99D680013E454 /* HistoryData+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "HistoryData+CoreDataProperties.h"; path = "../HistoryData+CoreDataProperties.h"; sourceTree = "<group>"; };
+		F44904171CF99D680013E454 /* HistoryData+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "HistoryData+CoreDataProperties.m"; path = "../HistoryData+CoreDataProperties.m"; sourceTree = "<group>"; };
+		F44904181CF99D680013E454 /* HistoryData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HistoryData.h; path = ../HistoryData.h; sourceTree = "<group>"; };
+		F44904191CF99D680013E454 /* HistoryData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HistoryData.m; path = ../HistoryData.m; sourceTree = "<group>"; };
+		F449041C1CF9AA4B0013E454 /* HistoryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryTableViewCell.h; sourceTree = "<group>"; };
+		F449041D1CF9AA4B0013E454 /* HistoryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryTableViewCell.m; sourceTree = "<group>"; };
+		F449041F1CFB4D520013E454 /* icon_down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_down@2x.png"; path = "../../icon_down@2x.png"; sourceTree = "<group>"; };
+		F455D3B01D00756A00872943 /* DaoEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaoEvents.h; sourceTree = "<group>"; };
+		F455D3B11D00756A00872943 /* DaoEvents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DaoEvents.m; sourceTree = "<group>"; };
+		F455D3B31D00757900872943 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		F455D3B41D00757900872943 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
+		F47ADE8E1CF1C13F004DA696 /* DailyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DailyTableViewCell.h; sourceTree = "<group>"; };
+		F47ADE8F1CF1C13F004DA696 /* DailyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DailyTableViewCell.m; sourceTree = "<group>"; };
+		F47ADE911CF1C44D004DA696 /* DailyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DailyTableViewCell.xib; sourceTree = "<group>"; };
+		F47ADE931CF2E82A004DA696 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		F47ADE951CF2EB2A004DA696 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F47EC8EA1D046AD2006B05D7 /* ConfigTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigTableViewCell.h; sourceTree = "<group>"; };
+		F47EC8EB1D046AD2006B05D7 /* ConfigTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigTableViewCell.m; sourceTree = "<group>"; };
+		F47EC8F51D064EBA006B05D7 /* checkmark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "checkmark@2x.png"; path = "../../checkmark@2x.png"; sourceTree = "<group>"; };
+		F48384191CFC6BA1006EC029 /* Default-568h@2x 21.21.19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x 21.21.19.png"; path = "../../Default-568h@2x 21.21.19.png"; sourceTree = "<group>"; };
+		F4E4D8DC1D09BC2100708016 /* InputViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InputViewController.xib; sourceTree = "<group>"; };
+		F4F146D21CBA928D00D32410 /* btn_config@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_config@2x.png"; sourceTree = "<group>"; };
+		F4F146D61CBBF84A00D32410 /* lightblue.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lightblue.jpg; sourceTree = "<group>"; };
+		F4F146D71CBBF84A00D32410 /* brown.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = brown.jpg; sourceTree = "<group>"; };
+		F4F146DA1CBBFDF400D32410 /* purple.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = purple.jpg; sourceTree = "<group>"; };
+		F4F146DB1CBBFDF400D32410 /* yellow.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = yellow.jpg; sourceTree = "<group>"; };
+		F4F146DC1CBBFDF400D32410 /* blue.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blue.jpg; sourceTree = "<group>"; };
+		F4F146DD1CBBFDF400D32410 /* green.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = green.jpg; sourceTree = "<group>"; };
+		F4F146DE1CBBFDF400D32410 /* orange.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = orange.jpg; sourceTree = "<group>"; };
+		F4F146DF1CBBFDF400D32410 /* lightgreen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lightgreen.jpg; sourceTree = "<group>"; };
+		F4F146E01CBBFDF400D32410 /* red.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = red.jpg; sourceTree = "<group>"; };
+		F4F146E11CBBFDF400D32410 /* pink.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pink.jpg; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F40122351CB8801700D9228A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F47ADE941CF2E82A004DA696 /* MessageUI.framework in Frameworks */,
+				65B17EB54281A46AF93C12FA /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F401224E1CB8801800D9228A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F40122591CB8801800D9228A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		298301C08AD61D1E2A34C582 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				09D75EA15D0BC541BF23333D /* Pods.debug.xcconfig */,
+				A62073D9CFAC4AF19E087393 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A7FE3A2EA25A2851B889E6AF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F47ADE931CF2E82A004DA696 /* MessageUI.framework */,
+				A366A2CE0331CA671284063C /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F401222F1CB8801700D9228A = {
+			isa = PBXGroup;
+			children = (
+				F401223A1CB8801700D9228A /* ClassScheduleApp */,
+				F40122541CB8801800D9228A /* ClassScheduleAppTests */,
+				F401225F1CB8801800D9228A /* ClassScheduleAppUITests */,
+				F40122391CB8801700D9228A /* Products */,
+				298301C08AD61D1E2A34C582 /* Pods */,
+				A7FE3A2EA25A2851B889E6AF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F40122391CB8801700D9228A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F40122381CB8801700D9228A /* ClassScheduleApp.app */,
+				F40122511CB8801800D9228A /* ClassScheduleAppTests.xctest */,
+				F401225C1CB8801800D9228A /* ClassScheduleAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F401223A1CB8801700D9228A /* ClassScheduleApp */ = {
+			isa = PBXGroup;
+			children = (
+				F4F146D11CBA927D00D32410 /* Resources */,
+				F401223E1CB8801700D9228A /* AppDelegate.h */,
+				F401223F1CB8801700D9228A /* AppDelegate.m */,
+				F401226E1CB8804A00D9228A /* ContainerViewController.h */,
+				F401226F1CB8804A00D9228A /* ContainerViewController.m */,
+				F40122801CB8815D00D9228A /* Daily */,
+				F40122811CB8816F00D9228A /* Weekly */,
+				F40122971CB89A2900D9228A /* Model */,
+				F40122861CB882C200D9228A /* Common */,
+				F40122A11CB8A39100D9228A /* View */,
+				F40122471CB8801700D9228A /* Assets.xcassets */,
+				F40122491CB8801700D9228A /* LaunchScreen.storyboard */,
+				F401224C1CB8801700D9228A /* Info.plist */,
+				F40122871CB8830700D9228A /* ClassScheduleApp-Prefix.pch */,
+				F47ADE951CF2EB2A004DA696 /* Images.xcassets */,
+				F401223B1CB8801700D9228A /* Supporting Files */,
+			);
+			path = ClassScheduleApp;
+			sourceTree = "<group>";
+		};
+		F401223B1CB8801700D9228A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F401223C1CB8801700D9228A /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F40122541CB8801800D9228A /* ClassScheduleAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				F40122551CB8801800D9228A /* ClassScheduleAppTests.m */,
+				F40122571CB8801800D9228A /* Info.plist */,
+			);
+			path = ClassScheduleAppTests;
+			sourceTree = "<group>";
+		};
+		F401225F1CB8801800D9228A /* ClassScheduleAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F40122601CB8801800D9228A /* ClassScheduleAppUITests.m */,
+				F40122621CB8801800D9228A /* Info.plist */,
+			);
+			path = ClassScheduleAppUITests;
+			sourceTree = "<group>";
+		};
+		F40122801CB8815D00D9228A /* Daily */ = {
+			isa = PBXGroup;
+			children = (
+				F40122711CB8809400D9228A /* DailyContainerViewController.h */,
+				F40122721CB8809400D9228A /* DailyContainerViewController.m */,
+				F40122741CB880A000D9228A /* DailyTableViewController.h */,
+				F40122751CB880A000D9228A /* DailyTableViewController.m */,
+				F47ADE8E1CF1C13F004DA696 /* DailyTableViewCell.h */,
+				F47ADE8F1CF1C13F004DA696 /* DailyTableViewCell.m */,
+				F47ADE911CF1C44D004DA696 /* DailyTableViewCell.xib */,
+			);
+			name = Daily;
+			sourceTree = "<group>";
+		};
+		F40122811CB8816F00D9228A /* Weekly */ = {
+			isa = PBXGroup;
+			children = (
+				F40122771CB880AE00D9228A /* WeeklyViewController.h */,
+				F40122781CB880AE00D9228A /* WeeklyViewController.m */,
+				F40122881CB891E400D9228A /* GridView.h */,
+				F40122891CB891E400D9228A /* GridView.m */,
+				F401228B1CB8984800D9228A /* GridViewCell.h */,
+				F401228C1CB8984800D9228A /* GridViewCell.m */,
+			);
+			name = Weekly;
+			sourceTree = "<group>";
+		};
+		F40122861CB882C200D9228A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F40122821CB8823C00D9228A /* CommonDefine.h */,
+				F40122831CB8829B00D9228A /* CommonUtil.h */,
+				F40122841CB8829B00D9228A /* CommonUtil.m */,
+				F44904091CF677BC0013E454 /* TriangleButton.h */,
+				F449040A1CF677BC0013E454 /* TriangleButton.m */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		F40122971CB89A2900D9228A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F455D3AC1D00750800872943 /* FMDB */,
+				F401227A1CB8814400D9228A /* CoreDataManager.h */,
+				F401227B1CB8814400D9228A /* CoreDataManager.m */,
+				F401228E1CB8993700D9228A /* Model.xcdatamodeld */,
+				F40122981CB89C5A00D9228A /* ClassData+CoreDataProperties.h */,
+				F40122991CB89C5A00D9228A /* ClassData+CoreDataProperties.m */,
+				F401229A1CB89C5A00D9228A /* ClassData.h */,
+				F401229B1CB89C5A00D9228A /* ClassData.m */,
+				F44904161CF99D680013E454 /* HistoryData+CoreDataProperties.h */,
+				F44904171CF99D680013E454 /* HistoryData+CoreDataProperties.m */,
+				F44904181CF99D680013E454 /* HistoryData.h */,
+				F44904191CF99D680013E454 /* HistoryData.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		F40122A11CB8A39100D9228A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F401227D1CB8815400D9228A /* ConfigViewController.h */,
+				F401227E1CB8815400D9228A /* ConfigViewController.m */,
+				F47EC8EA1D046AD2006B05D7 /* ConfigTableViewCell.h */,
+				F47EC8EB1D046AD2006B05D7 /* ConfigTableViewCell.m */,
+				F401229E1CB8A19800D9228A /* InputPopupView.h */,
+				F401229F1CB8A19800D9228A /* InputPopupView.m */,
+				F449041C1CF9AA4B0013E454 /* HistoryTableViewCell.h */,
+				F449041D1CF9AA4B0013E454 /* HistoryTableViewCell.m */,
+				F44904131CF8FBEA0013E454 /* InputViewController.h */,
+				F44904141CF8FBEA0013E454 /* InputViewController.m */,
+				F4E4D8DC1D09BC2100708016 /* InputViewController.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		F449040C1CF751EC0013E454 /* Icon */ = {
+			isa = PBXGroup;
+			children = (
+				F4F146D21CBA928D00D32410 /* btn_config@2x.png */,
+				F47EC8F51D064EBA006B05D7 /* checkmark@2x.png */,
+				F449041F1CFB4D520013E454 /* icon_down@2x.png */,
+				F449040D1CF751FE0013E454 /* icon_class@2x.png */,
+				F449040E1CF751FE0013E454 /* icon_pencil@2x.png */,
+				F449040F1CF751FE0013E454 /* icon_teacher@2x.png */,
+			);
+			name = Icon;
+			sourceTree = "<group>";
+		};
+		F455D3AC1D00750800872943 /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				F455D3B01D00756A00872943 /* DaoEvents.h */,
+				F455D3B11D00756A00872943 /* DaoEvents.m */,
+				F455D3B31D00757900872943 /* Event.h */,
+				F455D3B41D00757900872943 /* Event.m */,
+			);
+			name = FMDB;
+			sourceTree = "<group>";
+		};
+		F47EC8F71D064F1D006B05D7 /* Background */ = {
+			isa = PBXGroup;
+			children = (
+				F4F146DA1CBBFDF400D32410 /* purple.jpg */,
+				F4F146DB1CBBFDF400D32410 /* yellow.jpg */,
+				F4F146DC1CBBFDF400D32410 /* blue.jpg */,
+				F4F146DD1CBBFDF400D32410 /* green.jpg */,
+				F4F146DE1CBBFDF400D32410 /* orange.jpg */,
+				F4F146DF1CBBFDF400D32410 /* lightgreen.jpg */,
+				F4F146E01CBBFDF400D32410 /* red.jpg */,
+				F4F146E11CBBFDF400D32410 /* pink.jpg */,
+				F4F146D61CBBF84A00D32410 /* lightblue.jpg */,
+				F4F146D71CBBF84A00D32410 /* brown.jpg */,
+			);
+			name = Background;
+			sourceTree = "<group>";
+		};
+		F4F146D11CBA927D00D32410 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F48384191CFC6BA1006EC029 /* Default-568h@2x 21.21.19.png */,
+				F47EC8F71D064F1D006B05D7 /* Background */,
+				F449040C1CF751EC0013E454 /* Icon */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F40122371CB8801700D9228A /* ClassScheduleApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F40122651CB8801800D9228A /* Build configuration list for PBXNativeTarget "ClassScheduleApp" */;
+			buildPhases = (
+				8D16158E5BA3A23A7758D16C /* Check Pods Manifest.lock */,
+				F40122341CB8801700D9228A /* Sources */,
+				F40122351CB8801700D9228A /* Frameworks */,
+				F40122361CB8801700D9228A /* Resources */,
+				A780D58097B0A5D1ED20232F /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ClassScheduleApp;
+			productName = ClassScheduleApp;
+			productReference = F40122381CB8801700D9228A /* ClassScheduleApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F40122501CB8801800D9228A /* ClassScheduleAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F40122681CB8801800D9228A /* Build configuration list for PBXNativeTarget "ClassScheduleAppTests" */;
+			buildPhases = (
+				F401224D1CB8801800D9228A /* Sources */,
+				F401224E1CB8801800D9228A /* Frameworks */,
+				F401224F1CB8801800D9228A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F40122531CB8801800D9228A /* PBXTargetDependency */,
+			);
+			name = ClassScheduleAppTests;
+			productName = ClassScheduleAppTests;
+			productReference = F40122511CB8801800D9228A /* ClassScheduleAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F401225B1CB8801800D9228A /* ClassScheduleAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F401226B1CB8801800D9228A /* Build configuration list for PBXNativeTarget "ClassScheduleAppUITests" */;
+			buildPhases = (
+				F40122581CB8801800D9228A /* Sources */,
+				F40122591CB8801800D9228A /* Frameworks */,
+				F401225A1CB8801800D9228A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F401225E1CB8801800D9228A /* PBXTargetDependency */,
+			);
+			name = ClassScheduleAppUITests;
+			productName = ClassScheduleAppUITests;
+			productReference = F401225C1CB8801800D9228A /* ClassScheduleAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F40122301CB8801700D9228A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = teruyakusumoto;
+				TargetAttributes = {
+					F40122371CB8801700D9228A = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = N5G2HYLBAE;
+					};
+					F40122501CB8801800D9228A = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = F40122371CB8801700D9228A;
+					};
+					F401225B1CB8801800D9228A = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = F40122371CB8801700D9228A;
+					};
+				};
+			};
+			buildConfigurationList = F40122331CB8801700D9228A /* Build configuration list for PBXProject "ClassScheduleApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F401222F1CB8801700D9228A;
+			productRefGroup = F40122391CB8801700D9228A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F40122371CB8801700D9228A /* ClassScheduleApp */,
+				F40122501CB8801800D9228A /* ClassScheduleAppTests */,
+				F401225B1CB8801800D9228A /* ClassScheduleAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F40122361CB8801700D9228A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F401224B1CB8801700D9228A /* LaunchScreen.storyboard in Resources */,
+				F4F146E21CBBFDF400D32410 /* purple.jpg in Resources */,
+				F44904121CF751FE0013E454 /* icon_teacher@2x.png in Resources */,
+				F4F146D91CBBF84A00D32410 /* brown.jpg in Resources */,
+				F47ADE921CF1C44D004DA696 /* DailyTableViewCell.xib in Resources */,
+				F4F146E61CBBFDF400D32410 /* orange.jpg in Resources */,
+				F4F146E71CBBFDF400D32410 /* lightgreen.jpg in Resources */,
+				F47ADE961CF2EB2A004DA696 /* Images.xcassets in Resources */,
+				F44904201CFB4D520013E454 /* icon_down@2x.png in Resources */,
+				F4F146E51CBBFDF400D32410 /* green.jpg in Resources */,
+				F483841A1CFC6BA1006EC029 /* Default-568h@2x 21.21.19.png in Resources */,
+				F4F146D31CBA928E00D32410 /* btn_config@2x.png in Resources */,
+				F4F146D81CBBF84A00D32410 /* lightblue.jpg in Resources */,
+				F40122481CB8801700D9228A /* Assets.xcassets in Resources */,
+				F44904111CF751FE0013E454 /* icon_pencil@2x.png in Resources */,
+				F4F146E81CBBFDF400D32410 /* red.jpg in Resources */,
+				F44904101CF751FE0013E454 /* icon_class@2x.png in Resources */,
+				F47EC8F61D064EBA006B05D7 /* checkmark@2x.png in Resources */,
+				F4F146E31CBBFDF400D32410 /* yellow.jpg in Resources */,
+				F4F146E41CBBFDF400D32410 /* blue.jpg in Resources */,
+				F4F146E91CBBFDF400D32410 /* pink.jpg in Resources */,
+				F4E4D8DD1D09BC2100708016 /* InputViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F401224F1CB8801800D9228A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F401225A1CB8801800D9228A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8D16158E5BA3A23A7758D16C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A780D58097B0A5D1ED20232F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F40122341CB8801700D9228A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F449041B1CF99D680013E454 /* HistoryData.m in Sources */,
+				F401228D1CB8984800D9228A /* GridViewCell.m in Sources */,
+				F40122731CB8809400D9228A /* DailyContainerViewController.m in Sources */,
+				F401227C1CB8814400D9228A /* CoreDataManager.m in Sources */,
+				F40122401CB8801700D9228A /* AppDelegate.m in Sources */,
+				F40122761CB880A000D9228A /* DailyTableViewController.m in Sources */,
+				F47ADE901CF1C13F004DA696 /* DailyTableViewCell.m in Sources */,
+				F455D3B21D00756A00872943 /* DaoEvents.m in Sources */,
+				F449040B1CF677BC0013E454 /* TriangleButton.m in Sources */,
+				F455D3B51D00757900872943 /* Event.m in Sources */,
+				F44904151CF8FBEA0013E454 /* InputViewController.m in Sources */,
+				F401229D1CB89C5A00D9228A /* ClassData.m in Sources */,
+				F40122851CB8829B00D9228A /* CommonUtil.m in Sources */,
+				F449041E1CF9AA4B0013E454 /* HistoryTableViewCell.m in Sources */,
+				F449041A1CF99D680013E454 /* HistoryData+CoreDataProperties.m in Sources */,
+				F40122791CB880AE00D9228A /* WeeklyViewController.m in Sources */,
+				F40122701CB8804A00D9228A /* ContainerViewController.m in Sources */,
+				F47EC8EC1D046AD2006B05D7 /* ConfigTableViewCell.m in Sources */,
+				F401227F1CB8815400D9228A /* ConfigViewController.m in Sources */,
+				F401228A1CB891E400D9228A /* GridView.m in Sources */,
+				F401223D1CB8801700D9228A /* main.m in Sources */,
+				F401229C1CB89C5A00D9228A /* ClassData+CoreDataProperties.m in Sources */,
+				F40122A01CB8A19800D9228A /* InputPopupView.m in Sources */,
+				F40122901CB8993700D9228A /* Model.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F401224D1CB8801800D9228A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F40122561CB8801800D9228A /* ClassScheduleAppTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F40122581CB8801800D9228A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F40122611CB8801800D9228A /* ClassScheduleAppUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F40122531CB8801800D9228A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F40122371CB8801700D9228A /* ClassScheduleApp */;
+			targetProxy = F40122521CB8801800D9228A /* PBXContainerItemProxy */;
+		};
+		F401225E1CB8801800D9228A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F40122371CB8801700D9228A /* ClassScheduleApp */;
+			targetProxy = F401225D1CB8801800D9228A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F40122491CB8801700D9228A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F401224A1CB8801700D9228A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F40122631CB8801800D9228A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F40122641CB8801800D9228A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F40122661CB8801800D9228A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09D75EA15D0BC541BF23333D /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREFIX_HEADER = "ClassScheduleApp/ClassScheduleApp-Prefix.pch";
+				INFOPLIST_FILE = ClassScheduleApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.terutry;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F40122671CB8801800D9228A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A62073D9CFAC4AF19E087393 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREFIX_HEADER = "ClassScheduleApp/ClassScheduleApp-Prefix.pch";
+				INFOPLIST_FILE = ClassScheduleApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.terutry;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F40122691CB8801800D9228A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ClassScheduleAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = teruyakusumoto.ClassScheduleAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClassScheduleApp.app/ClassScheduleApp";
+			};
+			name = Debug;
+		};
+		F401226A1CB8801800D9228A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ClassScheduleAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = teruyakusumoto.ClassScheduleAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClassScheduleApp.app/ClassScheduleApp";
+			};
+			name = Release;
+		};
+		F401226C1CB8801800D9228A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ClassScheduleAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = teruyakusumoto.ClassScheduleAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ClassScheduleApp;
+			};
+			name = Debug;
+		};
+		F401226D1CB8801800D9228A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ClassScheduleAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = teruyakusumoto.ClassScheduleAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ClassScheduleApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F40122331CB8801700D9228A /* Build configuration list for PBXProject "ClassScheduleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F40122631CB8801800D9228A /* Debug */,
+				F40122641CB8801800D9228A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F40122651CB8801800D9228A /* Build configuration list for PBXNativeTarget "ClassScheduleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F40122661CB8801800D9228A /* Debug */,
+				F40122671CB8801800D9228A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F40122681CB8801800D9228A /* Build configuration list for PBXNativeTarget "ClassScheduleAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F40122691CB8801800D9228A /* Debug */,
+				F401226A1CB8801800D9228A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F401226B1CB8801800D9228A /* Build configuration list for PBXNativeTarget "ClassScheduleAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F401226C1CB8801800D9228A /* Debug */,
+				F401226D1CB8801800D9228A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F401228E1CB8993700D9228A /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F401228F1CB8993700D9228A /* Model.xcdatamodel */,
+			);
+			currentVersion = F401228F1CB8993700D9228A /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = F40122301CB8801700D9228A /* Project object */;
+}

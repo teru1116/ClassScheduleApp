@@ -1,0 +1,18 @@
+PODS:
+  - FMDB (2.6.2):
+    - FMDB/standard (= 2.6.2)
+  - FMDB/standard (2.6.2)
+  - SVProgressHUD (2.0.3)
+  - YSLContainerViewController (0.0.2)
+
+DEPENDENCIES:
+  - FMDB
+  - SVProgressHUD
+  - YSLContainerViewController
+
+SPEC CHECKSUMS:
+  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
+  YSLContainerViewController: f4ca045a6965333db46d8c793483b07abb3a0508
+
+COCOAPODS: 0.38.2
