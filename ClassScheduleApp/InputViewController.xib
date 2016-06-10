@@ -7,9 +7,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InputViewController">
             <connections>
+                <outlet property="attendanceSectionView" destination="Wh1-KN-FeF" id="CfU-bE-2uR"/>
+                <outlet property="basicInfoSectionView" destination="i32-jM-5mC" id="jnv-a5-5Pt"/>
                 <outlet property="colorSectionView" destination="Oao-2Q-sEf" id="QAs-OL-Ufa"/>
                 <outlet property="contentView" destination="b2Z-gi-LEv" id="nJ7-hU-xFv"/>
+                <outlet property="nameTextField" destination="Nyv-Vo-OC3" id="J6a-NS-QiE"/>
+                <outlet property="noteTextField" destination="uzV-Ek-Ddy" id="Rrv-kp-g5z"/>
+                <outlet property="placeTextField" destination="9eq-gk-e1c" id="76E-by-5xr"/>
                 <outlet property="scrollView" destination="DOe-cG-xPO" id="ciw-j2-4mg"/>
+                <outlet property="teacherTextField" destination="Onr-9i-VbK" id="KNG-f2-l9M"/>
                 <outlet property="view" destination="I3k-K4-LEN" id="SfL-tT-c0V"/>
             </connections>
         </placeholder>
@@ -48,18 +54,31 @@
                             <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="2"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="0"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="C3H-Zg-Zme"/>
+                            </connections>
                         </textField>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9eq-gk-e1c">
                             <rect key="frame" x="20" y="100" width="280" height="30"/>
                             <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="PrP-2g-qwy"/>
+                            </connections>
                         </textField>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Onr-9i-VbK">
                             <rect key="frame" x="20" y="165" width="280" height="30"/>
                             <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="lYO-SR-Qqo"/>
+                            </connections>
                         </textField>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uzV-Ek-Ddy">
                             <rect key="frame" x="20" y="230" width="280" height="30"/>
@@ -69,6 +88,9 @@
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="aDw-gr-JrN"/>
+                            </connections>
                         </textField>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="授業名（必須）" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NnY-mD-DS7">
                             <rect key="frame" x="20" y="10" width="100" height="20"/>
@@ -137,9 +159,27 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="110" id="KQ5-M1-T4V"/>
                     </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="layer.separatorColor">
+                            <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="カラー" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5IL-TD-7Bh">
                     <rect key="frame" x="20" y="295" width="100" height="20"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wh1-KN-FeF">
+                    <rect key="frame" x="0.0" y="470" width="320" height="200"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="UIx-UV-Us8"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="出欠管理" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hn4-8k-q1s">
+                    <rect key="frame" x="20" y="445" width="100" height="20"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
@@ -148,10 +188,13 @@
             <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="i32-jM-5mC" firstAttribute="leading" secondItem="b2Z-gi-LEv" secondAttribute="leading" id="09m-j5-JXE"/>
+                <constraint firstItem="Wh1-KN-FeF" firstAttribute="leading" secondItem="b2Z-gi-LEv" secondAttribute="leading" id="9Yh-gn-ok0"/>
                 <constraint firstAttribute="trailing" secondItem="Oao-2Q-sEf" secondAttribute="trailing" id="Dj9-Jo-wga"/>
                 <constraint firstItem="i32-jM-5mC" firstAttribute="top" secondItem="b2Z-gi-LEv" secondAttribute="top" id="Jxt-6N-fdq"/>
                 <constraint firstItem="i32-jM-5mC" firstAttribute="width" secondItem="b2Z-gi-LEv" secondAttribute="width" id="RG6-g8-5HC"/>
+                <constraint firstAttribute="trailing" secondItem="Wh1-KN-FeF" secondAttribute="trailing" id="UBc-A7-oVH"/>
                 <constraint firstItem="Oao-2Q-sEf" firstAttribute="top" secondItem="i32-jM-5mC" secondAttribute="bottom" constant="20" id="YdC-lD-W72"/>
+                <constraint firstItem="Wh1-KN-FeF" firstAttribute="top" secondItem="Oao-2Q-sEf" secondAttribute="bottom" constant="40" id="da3-Xk-Wvf"/>
                 <constraint firstItem="Oao-2Q-sEf" firstAttribute="top" secondItem="i32-jM-5mC" secondAttribute="bottom" constant="40" id="qVZ-uW-uvJ"/>
                 <constraint firstItem="Oao-2Q-sEf" firstAttribute="leading" secondItem="b2Z-gi-LEv" secondAttribute="leading" id="qqz-GJ-ovr"/>
                 <constraint firstAttribute="trailing" secondItem="i32-jM-5mC" secondAttribute="trailing" id="sph-1U-cDt"/>

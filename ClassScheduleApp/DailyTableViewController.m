@@ -104,11 +104,7 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     DailyTableViewCell *cell = (DailyTableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
-    if (!cell.classData) {
-        // popup
-    }
-    InputViewController *vc = [[InputViewController alloc] initWithNibName:@"InputViewController" bundle:nil];
-//    InputViewController *vc = [[InputViewController alloc] initWithClassData:cell.classData dayNumber:_dayNumber+1 periodNumber:indexPath.row+1];
+    InputViewController *vc = [[InputViewController alloc] initWithClassData:cell.classData dayNumber:_dayNumber+1 periodNumber:indexPath.row+1];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

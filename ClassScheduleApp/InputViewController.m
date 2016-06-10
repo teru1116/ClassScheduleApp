@@ -24,11 +24,6 @@
 @property (nonatomic, strong) NSString *note;
 @property (nonatomic) NSInteger color;
 
-//@property (nonatomic, strong) UIScrollView *scrollView;
-@property (nonatomic, strong) UITextField *nameTextField;
-@property (nonatomic, strong) UITextField *placeTextField;
-@property (nonatomic, strong) UITextField *teacherTextField;
-@property (nonatomic, strong) UITextField *noteTextField;
 @property (nonatomic, strong) UITapGestureRecognizer *recognizer;
 @property (nonatomic) BOOL enableSave;
 
@@ -71,11 +66,56 @@
 {
     [super viewDidLoad];
     
+    // タイトル
+    {
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(60, 10, 120, 30)];
+        NSString *dayString = @[@"月曜日", @"火曜日", @"水曜日", @"木曜日", @"金曜日", @"土曜日", @"日曜日"][_dayNumber-1];
+        label.text = [NSString stringWithFormat:@"%@ %ld限", dayString, (long)_periodNumber];
+        label.textColor = [UIColor whiteColor];
+        label.textAlignment = NSTextAlignmentCenter;
+        label.font = [UIFont boldSystemFontOfSize:17];
+        self.navigationItem.titleView = label;
+    }
+    
     // スクロールビュー
     [self.scrollView setFrame:self.view.frame];
     [self.scrollView addSubview:self.contentView];
     [self.contentView setFrame:CGRectMake(0, 0, SCREEN_WIDTH, 1000)];
     [self.scrollView setContentSize:CGSizeMake(SCREEN_WIDTH, 1000)];
+    
+    // FIXME: Interface Builder使ってコードごっそりなくしたい
+    // ボーダー
+    UIColor *borderColor = [CommonUtil colorFromHexCode:@"e3e4e5"];
+    {
+        UIView *border = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 1)];
+        border.backgroundColor = borderColor;
+        [self.basicInfoSectionView addSubview:border];
+    }
+    {
+        UIView *border = [[UIView alloc] initWithFrame:CGRectMake(0, self.basicInfoSectionView.frame.size.height-1, SCREEN_WIDTH, 1)];
+        border.backgroundColor = borderColor;
+        [self.basicInfoSectionView addSubview:border];
+    }
+    {
+        UIView *border = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 1)];
+        border.backgroundColor = borderColor;
+        [self.colorSectionView addSubview:border];
+    }
+    {
+        UIView *border = [[UIView alloc] initWithFrame:CGRectMake(0, self.colorSectionView.frame.size.height-1, SCREEN_WIDTH, 1)];
+        border.backgroundColor = borderColor;
+        [self.colorSectionView addSubview:border];
+    }
+    {
+        UIView *border = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 1)];
+        border.backgroundColor = borderColor;
+        [self.attendanceSectionView addSubview:border];
+    }
+    {
+        UIView *border = [[UIView alloc] initWithFrame:CGRectMake(0, self.attendanceSectionView.frame.size.height-1, SCREEN_WIDTH, 1)];
+        border.backgroundColor = borderColor;
+        [self.attendanceSectionView addSubview:border];
+    }
     
     // カラーパネル
     int col = 0;
@@ -103,131 +143,6 @@
 
 //- (void)viewDidLoad
 //{
-//    [super viewDidLoad];
-//    self.dayNumber = 1;
-//    self.periodNumber = 1;
-//
-//    self.scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-108)];
-//    self.scrollView.backgroundColor = [UIColor whiteColor];
-//    [self.view addSubview:self.scrollView];
-//    
-//    {
-//        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(60, 10, 120, 30)];
-//        NSString *dayString = @[@"月曜日", @"火曜日", @"水曜日", @"木曜日", @"金曜日", @"土曜日", @"日曜日"][_dayNumber-1];
-//        label.text = [NSString stringWithFormat:@"%@ %ld限", dayString, (long)_periodNumber];
-//        label.textColor = [UIColor whiteColor];
-//        label.textAlignment = NSTextAlignmentCenter;
-//        label.font = [UIFont boldSystemFontOfSize:17];
-//        self.navigationItem.titleView = label;
-//    }
-//    
-//    // 授業名（必須）
-//    {
-//        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(20, 10, 120, 20)];
-//        label.text = @"授業名（必須）";
-//        label.font = [UIFont systemFontOfSize:14];
-//        [self.scrollView addSubview:label];
-//        
-//        self.nameTextField = [[UITextField alloc] initWithFrame:CGRectMake(20, 35, SCREEN_WIDTH-40, 30)];
-//        self.nameTextField.text = _classData ? _classData.name : nil;
-//        self.nameTextField.backgroundColor = COLOR_GRAY;
-//        self.nameTextField.font = [UIFont systemFontOfSize:15];
-//        self.nameTextField.layer.cornerRadius = 4.0;
-//        self.nameTextField.clipsToBounds = YES;
-//        self.nameTextField.layer.sublayerTransform = CATransform3DMakeTranslation(5, 0, 0);
-//        self.nameTextField.delegate = self;
-//        self.nameTextField.tag = 1;
-//        [self.scrollView addSubview:self.nameTextField];
-//    }
-//    
-//    // 教室
-//    {
-//        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(20, 75, 100, 20)];
-//        label.text = @"教室";
-//        label.font = [UIFont systemFontOfSize:14];
-//        [self.scrollView addSubview:label];
-//        
-//        self.placeTextField = [[UITextField alloc] initWithFrame:CGRectMake(20, 100, SCREEN_WIDTH-40, 30)];
-//        self.placeTextField.text = _classData ? _classData.place : nil;
-//        self.placeTextField.backgroundColor = COLOR_GRAY;
-//        self.placeTextField.font = [UIFont systemFontOfSize:15];
-//        self.placeTextField.layer.cornerRadius = 4.0;
-//        self.placeTextField.clipsToBounds = YES;
-//        self.placeTextField.layer.sublayerTransform = CATransform3DMakeTranslation(5, 0, 0);
-//        self.placeTextField.delegate = self;
-//        self.placeTextField.tag = 2;
-//        [self.scrollView addSubview:self.placeTextField];
-//    }
-//    
-//    // 先生
-//    {
-//        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(20, 140, 100, 20)];
-//        label.text = @"先生";
-//        label.font = [UIFont systemFontOfSize:14];
-//        [self.scrollView addSubview:label];
-//        
-//        self.teacherTextField = [[UITextField alloc] initWithFrame:CGRectMake(20, 165, SCREEN_WIDTH-40, 30)];
-//        self.teacherTextField.text = _classData ? _classData.teacher : nil;
-//        self.teacherTextField.backgroundColor = COLOR_GRAY;
-//        self.teacherTextField.font = [UIFont systemFontOfSize:15];
-//        self.teacherTextField.layer.cornerRadius = 4.0;
-//        self.teacherTextField.clipsToBounds = YES;
-//        self.teacherTextField.layer.sublayerTransform = CATransform3DMakeTranslation(5, 0, 0);
-//        self.teacherTextField.delegate = self;
-//        self.teacherTextField.tag = 3;
-//        [self.scrollView addSubview:self.teacherTextField];
-//    }
-//    
-//    // 備考
-//    {
-//        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(20, 205, 100, 20)];
-//        label.text = @"備考";
-//        label.font = [UIFont systemFontOfSize:14];
-//        [self.scrollView addSubview:label];
-//        
-//        self.noteTextField = [[UITextField alloc] initWithFrame:CGRectMake(20, 230, SCREEN_WIDTH-40, 30)];
-//        self.noteTextField.text = _classData ? _classData.note : nil;
-//        self.noteTextField.backgroundColor = COLOR_GRAY;
-//        self.noteTextField.font = [UIFont systemFontOfSize:15];
-//        self.noteTextField.layer.cornerRadius = 4.0;
-//        self.noteTextField.clipsToBounds = YES;
-//        self.noteTextField.layer.sublayerTransform = CATransform3DMakeTranslation(5, 0, 0);
-//        self.noteTextField.delegate = self;
-//        self.noteTextField.tag = 4;
-//        [self.scrollView addSubview:self.noteTextField];
-//    }
-//    
-//    // 色
-//    {
-//        int col = 0;
-//        int row = 0;
-//        NSArray *colorCodes = @[@"d16f6b", @"ec513b", @"f7a644", @"fce984", @"b4db6d", @"43d593", @"a0e0e8", @"4a85e8", @"ba9aff", @"f790b4"];
-//        for (int i = 0; i < [colorCodes count]; i++) {
-//            UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(20+col*40, 280+row*40, 30, 30)];
-//            btn.tag = i;
-//            [btn addTarget:self action:@selector(colorDidSelect:) forControlEvents:UIControlEventTouchUpInside];
-//            btn.backgroundColor = [CommonUtil colorFromHexCode:colorCodes[i]];
-//            [self.scrollView addSubview:btn];
-//            
-//            if (i == self.color) {
-//                [btn setImage:[UIImage imageNamed:@"checkmark"] forState:UIControlStateNormal];
-//            }
-//            
-//            if (20+col*40 > SCREEN_WIDTH-100) {
-//                col = 0;
-//                row++;
-//            } else {
-//                col++;
-//            }
-//        }
-//    }
-//    
-//    {
-//        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(20, 360, SCREEN_WIDTH-20, 30)];
-//        label.text = @"出欠管理";
-//        label.font = [UIFont systemFontOfSize:14];
-//        [self.scrollView addSubview:label];
-//    }
 //    
 //    // 日付
 //    {
@@ -468,7 +383,7 @@
     
     if (!self.recognizer) {
         self.recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closeKeyboard)];
-        [self.scrollView addGestureRecognizer:self.recognizer];
+        [self.contentView addGestureRecognizer:self.recognizer];
         [self.recognizer addTarget:self action:@selector(closeKeyboard)];
     }
     
@@ -485,7 +400,7 @@
 
 - (void)closeKeyboard
 {
-    for (UIView *view in self.scrollView.subviews) {
+    for (UIView *view in self.basicInfoSectionView.subviews) {
         if ([view isKindOfClass:[UITextField class]]) {
             UITextField *textField = (UITextField *)view;
             [textField resignFirstResponder];
@@ -512,7 +427,7 @@
 
 - (void)colorDidSelect:(UIButton *)sender
 {
-    for (UIView *view in self.scrollView.subviews) {
+    for (UIView *view in self.colorSectionView.subviews) {
         if ([view isKindOfClass:[UIButton class]]) {
             UIButton *btn = (UIButton *)view;
             [btn setImage:nil forState:UIControlStateNormal];
