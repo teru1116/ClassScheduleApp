@@ -67,15 +67,13 @@
     [super viewDidLoad];
     
     // タイトル
-    {
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(60, 10, 120, 30)];
-        NSString *dayString = @[@"月曜日", @"火曜日", @"水曜日", @"木曜日", @"金曜日", @"土曜日", @"日曜日"][_dayNumber-1];
-        label.text = [NSString stringWithFormat:@"%@ %ld限", dayString, (long)_periodNumber];
-        label.textColor = [UIColor whiteColor];
-        label.textAlignment = NSTextAlignmentCenter;
-        label.font = [UIFont boldSystemFontOfSize:17];
-        self.navigationItem.titleView = label;
-    }
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(60, 10, 120, 30)];
+    NSString *dayString = @[@"月曜日", @"火曜日", @"水曜日", @"木曜日", @"金曜日", @"土曜日", @"日曜日"][_dayNumber-1];
+    titleLabel.text = [NSString stringWithFormat:@"%@ %ld限", dayString, (long)_periodNumber];
+    titleLabel.textColor = [UIColor whiteColor];
+    titleLabel.textAlignment = NSTextAlignmentCenter;
+    titleLabel.font = [UIFont boldSystemFontOfSize:17];
+    self.navigationItem.titleView = titleLabel;
     
     // スクロールビュー
     [self.scrollView setFrame:self.view.frame];
@@ -139,109 +137,25 @@
             col++;
         }
     }
+    
+    // 日付セレクトボックス
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.dateFormat = @"yyyy年 M月 d日（E）";
+    self.dateSelectField.text = [dateFormatter stringFromDate:[NSDate date]];
+    
+    UIDatePicker *datePicker = [[UIDatePicker alloc] init];
+    datePicker.datePickerMode = UIDatePickerModeDate;
+    datePicker.backgroundColor = [UIColor whiteColor];
+    [datePicker addTarget:self action:@selector(updateDateField:) forControlEvents:UIControlEventValueChanged];
+    self.dateSelectField.inputView = datePicker;
+    
+    UIView *paddingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 10, 30)];
+    self.dateSelectField.leftView = paddingView;
+    self.dateSelectField.leftViewMode = UITextFieldViewModeAlways;
 }
 
 //- (void)viewDidLoad
 //{
-//    
-//    // 日付
-//    {
-//        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-//        dateFormatter.dateFormat = @"yyyy年 M月 d日（E）";
-//        
-//        UIDatePicker *datePicker = [[UIDatePicker alloc] init];
-//        datePicker.datePickerMode = UIDatePickerModeDate;
-//        datePicker.backgroundColor = [UIColor whiteColor];
-//        [datePicker addTarget:self action:@selector(updateDateField:) forControlEvents:UIControlEventValueChanged];
-//        
-//        self.currentDateField = [[UITextField alloc] initWithFrame:CGRectMake(0, 390, SCREEN_WIDTH, 44)];
-//        self.currentDateField.inputView = datePicker;
-//        self.currentDateField.text = [dateFormatter stringFromDate:[NSDate date]];
-//        self.currentDateField.textColor = [CommonUtil colorFromHexCode:@"4a4a4a"];
-//        self.currentDateField.font = [UIFont systemFontOfSize:15];
-//        self.currentDateField.textAlignment = NSTextAlignmentLeft;
-//        self.currentDateField.layer.borderColor = COLOR_GRAY.CGColor;
-//        self.currentDateField.layer.borderWidth = 1.0;
-//        self.currentDateField.layer.sublayerTransform = CATransform3DMakeTranslation(20, 0, 0);
-//        self.currentDateField.delegate = self;
-//        self.currentDateField.tag = 5;
-//        self.currentDateField.tintColor = [UIColor clearColor];
-//        [self.scrollView addSubview:self.currentDateField];
-//        
-//        UIImageView *iconDown = [[UIImageView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH-60, 14, 20, 20)];
-//        iconDown.image = [UIImage imageNamed:@"icon_down"];
-//        [self.currentDateField addSubview:iconDown];
-//    }
-//    
-//    // 出席
-//    {
-//        UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(40, 450, 60, 60)];
-//        btn.backgroundColor = [CommonUtil colorFromHexCode:@"4c8ffb"];
-//        btn.layer.cornerRadius = 30;
-//        btn.tag = 1;
-//        [btn addTarget:self action:@selector(btnDidTap:) forControlEvents:UIControlEventTouchUpInside];
-//        [self.scrollView addSubview:btn];
-//        
-//        self.attendLabel = [[UILabel alloc] initWithFrame:CGRectMake(15, 5, 30, 30)];
-//        self.attendLabel.textColor = [UIColor whiteColor];
-//        self.attendLabel.font = [UIFont boldSystemFontOfSize:18];
-//        self.attendLabel.textAlignment = NSTextAlignmentCenter;
-//        [btn addSubview:self.attendLabel];
-//        
-//        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(15, 34, 30, 20)];
-//        label.text = @"出席";
-//        label.textColor = [UIColor whiteColor];
-//        label.font = [UIFont systemFontOfSize:12];
-//        label.textAlignment = NSTextAlignmentCenter;
-//        [btn addSubview:label];
-//    }
-//    
-//    // 欠席
-//    {
-//        UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2-30, 450, 60, 60)];
-//        btn.backgroundColor = [CommonUtil colorFromHexCode:@"ff1493"];
-//        btn.layer.cornerRadius = 30;
-//        btn.tag = 2;
-//        [btn addTarget:self action:@selector(btnDidTap:) forControlEvents:UIControlEventTouchUpInside];
-//        [self.scrollView addSubview:btn];
-//        
-//        self.absentLabel = [[UILabel alloc] initWithFrame:CGRectMake(15, 5, 30, 30)];
-//        self.absentLabel.textColor = [UIColor whiteColor];
-//        self.absentLabel.font = [UIFont boldSystemFontOfSize:18];
-//        self.absentLabel.textAlignment = NSTextAlignmentCenter;
-//        [btn addSubview:self.absentLabel];
-//        
-//        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(15, 34, 30, 20)];
-//        label.text = @"欠席";
-//        label.textColor = [UIColor whiteColor];
-//        label.font = [UIFont systemFontOfSize:12];
-//        label.textAlignment = NSTextAlignmentCenter;
-//        [btn addSubview:label];
-//    }
-//    
-//    // 遅刻
-//    {
-//        UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH-100, 450, 60, 60)];
-//        btn.backgroundColor = [CommonUtil colorFromHexCode:@"F5A623"];
-//        btn.layer.cornerRadius = 30;
-//        btn.tag = 3;
-//        [btn addTarget:self action:@selector(btnDidTap:) forControlEvents:UIControlEventTouchUpInside];
-//        [self.scrollView addSubview:btn];
-//        
-//        self.lateLabel = [[UILabel alloc] initWithFrame:CGRectMake(15, 5, 30, 30)];
-//        self.lateLabel.textColor = [UIColor whiteColor];
-//        self.lateLabel.font = [UIFont boldSystemFontOfSize:18];
-//        self.lateLabel.textAlignment = NSTextAlignmentCenter;
-//        [btn addSubview:self.lateLabel];
-//        
-//        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(15, 34, 30, 20)];
-//        label.text = @"遅刻";
-//        label.textColor = [UIColor whiteColor];
-//        label.font = [UIFont systemFontOfSize:12];
-//        label.textAlignment = NSTextAlignmentCenter;
-//        [btn addSubview:label];
-//    }
-//    
 //    // 履歴
 //    {
 //        self.historyTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 530, SCREEN_WIDTH, 0) style:UITableViewStylePlain];
@@ -368,7 +282,7 @@
 {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     dateFormatter.dateFormat = @"yyyy年 M月 d日（E）";
-    self.currentDateField.text = [dateFormatter stringFromDate:sender.date];
+    self.dateSelectField.text = [dateFormatter stringFromDate:sender.date];
 }
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
@@ -400,17 +314,19 @@
 
 - (void)closeKeyboard
 {
-    for (UIView *view in self.basicInfoSectionView.subviews) {
-        if ([view isKindOfClass:[UITextField class]]) {
-            UITextField *textField = (UITextField *)view;
-            [textField resignFirstResponder];
+    for (UIView *view in self.contentView.subviews) {
+        for (UIView *subView in view.subviews) {
+            if ([subView isKindOfClass:[UITextField class]]) {
+                UITextField *textField = (UITextField *)subView;
+                [textField resignFirstResponder];
+            }
         }
     }
 }
 
 #pragma mark - button event
 
-- (void)btnDidTap:(UIButton *)sender
+- (IBAction)attendanceBtnDidTap:(UIButton *)sender
 {
     [[CoreDataManager sharedManager] saveWithBlock:^(NSManagedObjectContext *context) {
         HistoryData *historyData = [[HistoryData alloc] initWithEntity:[NSEntityDescription entityForName:@"HistoryData" inManagedObjectContext:context] insertIntoManagedObjectContext:context];

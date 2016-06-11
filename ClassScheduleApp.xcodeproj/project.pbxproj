@@ -46,6 +46,7 @@
 		F47EC8F61D064EBA006B05D7 /* checkmark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F47EC8F51D064EBA006B05D7 /* checkmark@2x.png */; };
 		F483841A1CFC6BA1006EC029 /* Default-568h@2x 21.21.19.png in Resources */ = {isa = PBXBuildFile; fileRef = F48384191CFC6BA1006EC029 /* Default-568h@2x 21.21.19.png */; };
 		F4E4D8DD1D09BC2100708016 /* InputViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4E4D8DC1D09BC2100708016 /* InputViewController.xib */; };
+		F4E4D8EA1D0BE22C00708016 /* triangle_down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4E4D8E91D0BE22C00708016 /* triangle_down@2x.png */; };
 		F4F146D31CBA928E00D32410 /* btn_config@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4F146D21CBA928D00D32410 /* btn_config@2x.png */; };
 		F4F146D81CBBF84A00D32410 /* lightblue.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F4F146D61CBBF84A00D32410 /* lightblue.jpg */; };
 		F4F146D91CBBF84A00D32410 /* brown.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F4F146D71CBBF84A00D32410 /* brown.jpg */; };
@@ -148,6 +149,7 @@
 		F47EC8F51D064EBA006B05D7 /* checkmark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "checkmark@2x.png"; path = "../../checkmark@2x.png"; sourceTree = "<group>"; };
 		F48384191CFC6BA1006EC029 /* Default-568h@2x 21.21.19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x 21.21.19.png"; path = "../../Default-568h@2x 21.21.19.png"; sourceTree = "<group>"; };
 		F4E4D8DC1D09BC2100708016 /* InputViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InputViewController.xib; sourceTree = "<group>"; };
+		F4E4D8E91D0BE22C00708016 /* triangle_down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "triangle_down@2x.png"; path = "../../triangle_down@2x.png"; sourceTree = "<group>"; };
 		F4F146D21CBA928D00D32410 /* btn_config@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_config@2x.png"; sourceTree = "<group>"; };
 		F4F146D61CBBF84A00D32410 /* lightblue.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lightblue.jpg; sourceTree = "<group>"; };
 		F4F146D71CBBF84A00D32410 /* brown.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = brown.jpg; sourceTree = "<group>"; };
@@ -356,6 +358,7 @@
 		F449040C1CF751EC0013E454 /* Icon */ = {
 			isa = PBXGroup;
 			children = (
+				F4E4D8E91D0BE22C00708016 /* triangle_down@2x.png */,
 				F4F146D21CBA928D00D32410 /* btn_config@2x.png */,
 				F47EC8F51D064EBA006B05D7 /* checkmark@2x.png */,
 				F449041F1CFB4D520013E454 /* icon_down@2x.png */,
@@ -531,6 +534,7 @@
 				F4F146E31CBBFDF400D32410 /* yellow.jpg in Resources */,
 				F4F146E41CBBFDF400D32410 /* blue.jpg in Resources */,
 				F4F146E91CBBFDF400D32410 /* pink.jpg in Resources */,
+				F4E4D8EA1D0BE22C00708016 /* triangle_down@2x.png in Resources */,
 				F4E4D8DD1D09BC2100708016 /* InputViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

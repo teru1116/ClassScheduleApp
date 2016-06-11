@@ -12,6 +12,8 @@
 
 - (instancetype)initWithClassData:(ClassData *)classData dayNumber:(NSInteger)dayNumber periodNumber:(NSInteger)periodNumber;
 
+- (IBAction)attendanceBtnDidTap:(UIButton *)sender;
+
 @property (nonatomic, weak) IBOutlet UIScrollView *scrollView;
 @property (nonatomic, weak) IBOutlet UIView *contentView;
 
@@ -24,5 +26,6 @@
 @property (nonatomic, weak) IBOutlet UIView *colorSectionView;
 
 @property (nonatomic, weak) IBOutlet UIView *attendanceSectionView;
+@property (nonatomic, weak) IBOutlet UITextField *dateSelectField;
 
 @end
