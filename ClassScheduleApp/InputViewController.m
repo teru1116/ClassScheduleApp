@@ -32,7 +32,6 @@
 @property (nonatomic, strong) UILabel *lateLabel;
 
 @property (nonatomic, strong) NSMutableArray *histories;
-@property (nonatomic, strong) UITableView *historyTableView;
 @property (nonatomic, strong) UITextField *currentDateField;
 
 @end
@@ -76,10 +75,10 @@
     self.navigationItem.titleView = titleLabel;
     
     // スクロールビュー
-    [self.scrollView setFrame:self.view.frame];
+    [self.scrollView setFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-40)];
     [self.scrollView addSubview:self.contentView];
-    [self.contentView setFrame:CGRectMake(0, 0, SCREEN_WIDTH, 1000)];
-    [self.scrollView setContentSize:CGSizeMake(SCREEN_WIDTH, 1000)];
+    [self.contentView setFrame:CGRectMake(0, 0, SCREEN_WIDTH, 680)];
+    [self.scrollView setContentSize:CGSizeMake(SCREEN_WIDTH, 680)];
     
     // FIXME: Interface Builder使ってコードごっそりなくしたい
     // ボーダー
@@ -152,43 +151,11 @@
     UIView *paddingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 10, 30)];
     self.dateSelectField.leftView = paddingView;
     self.dateSelectField.leftViewMode = UITextFieldViewModeAlways;
+    
+    // 削除ボタン & 保存ボタン
+    [self.deleteButton setHidden:!_classData];
+    [self.addButton setHidden:_classData];
 }
-
-//- (void)viewDidLoad
-//{
-//    // 履歴
-//    {
-//        self.historyTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 530, SCREEN_WIDTH, 0) style:UITableViewStylePlain];
-//        self.historyTableView.delegate = self;
-//        self.historyTableView.dataSource = self;
-//        self.historyTableView.allowsSelection = NO;
-//        [self.historyTableView registerClass:[HistoryTableViewCell class] forCellReuseIdentifier:@"historyCell"];
-//        [self.scrollView addSubview:self.historyTableView];
-//    }
-//    [self reloadHistoryData];
-//    
-//    // 削除ボタン
-//    if (_classData) {
-//        UIButton *deleteBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height-44-64, SCREEN_WIDTH/2, 44)];
-//        [deleteBtn setTitle:@"削除" forState:UIControlStateNormal];
-//        deleteBtn.backgroundColor = [CommonUtil colorFromHexCode:@"ddd"];
-//        [deleteBtn setTitleColor:[CommonUtil colorFromHexCode:@"4a4a4a"] forState:UIControlStateNormal];
-//        deleteBtn.titleLabel.font = [UIFont systemFontOfSize:14];
-//        [deleteBtn addTarget:self action:@selector(delete) forControlEvents:UIControlEventTouchUpInside];
-//        [self.view addSubview:deleteBtn];
-//    }
-//    
-//    // 登録ボタン
-//    CGFloat x = _classData ? SCREEN_WIDTH/2 : 0;
-//    CGFloat width = _classData ? SCREEN_WIDTH/2 : SCREEN_WIDTH;
-//    NSString *title = _classData ? @"保存" : @"登録";
-//    UIButton *saveBtn = [[UIButton alloc] initWithFrame:CGRectMake(x, self.view.frame.size.height-44-64, width, 44)];
-//    [saveBtn setTitle:title forState:UIControlStateNormal];
-//    saveBtn.backgroundColor = [CommonUtil colorFromHexCode:@"4c8ffb"];
-//    saveBtn.titleLabel.font = [UIFont systemFontOfSize:14];
-//    [saveBtn addTarget:self action:@selector(save) forControlEvents:UIControlEventTouchUpInside];
-//    [self.view addSubview:saveBtn];
-//}
 
 #pragma mark - UITableView Delegate
 
@@ -353,7 +320,7 @@
     self.color = sender.tag;
 }
 
-- (void)save
+- (IBAction)save:(id)sender
 {
     if (!self.nameTextField.text.length) {
         UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(110, 10, 200, 20)];
@@ -394,7 +361,7 @@
     }];
 }
 
-- (void)delete
+- (IBAction)remove:(id)sender
 {
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:@"授業を削除します。\nよろしいですか？" preferredStyle:UIAlertControllerStyleAlert];
     [alertController addAction:[UIAlertAction actionWithTitle:@"キャンセル" style:UIAlertActionStyleCancel handler:nil]];

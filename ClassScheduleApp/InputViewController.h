@@ -12,6 +12,8 @@
 
 - (instancetype)initWithClassData:(ClassData *)classData dayNumber:(NSInteger)dayNumber periodNumber:(NSInteger)periodNumber;
 
+- (IBAction)save:(id)sender;
+- (IBAction)remove:(id)sender;
 - (IBAction)attendanceBtnDidTap:(UIButton *)sender;
 
 @property (nonatomic, weak) IBOutlet UIScrollView *scrollView;
@@ -27,5 +29,10 @@
 
 @property (nonatomic, weak) IBOutlet UIView *attendanceSectionView;
 @property (nonatomic, weak) IBOutlet UITextField *dateSelectField;
+@property (nonatomic, weak) IBOutlet UITableView *historyTableView;
+
+@property (nonatomic, weak) IBOutlet UIButton *deleteButton;
+@property (nonatomic, weak) IBOutlet UIButton *saveButton;
+@property (nonatomic, weak) IBOutlet UIButton *addButton;
 
 @end
